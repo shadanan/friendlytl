@@ -127,6 +127,8 @@ Finally, we decrypt the ciphertext using the derived key and the initialization 
 
 Congrats on making it this far. That code was pretty dense. Cipherly is currently available at cipherly.app. The source code is MIT licensed and available on GitHub. As usual, the relevant links are in the description.
 
+Cipherly is very much a work in progress, and should probably not be used for real secrets. Even though I've been working professionally in the security industry for a while, it's easy to misuse crypto libraries. I would want to get an external audit of Cipherly before I can claim that it's safe to use.
+
 If you like Cipherly and have ideas for its improvement, drop your suggestions in the comments. I personally have some awesome features that I plan to add. Make sure you're subscribed so that you don't miss those updates. And while you're at it, hit those other buttons too.
 
 Thanks for watching, and I'll see you in the next one!
