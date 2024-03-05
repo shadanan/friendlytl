@@ -82,6 +82,21 @@ write('\n')
 backspace()
 ```
 
+```python
+even_times_tables = []
+for x in range(10):
+	for y in range(10):
+	    if x * y % 2 == 0:
+	        even_times_tables.append(x * y)
+
+even_times_tables = [
+	x * y
+	for x in range(10)
+	for y in range(10)
+	if x*y % 2 == 0
+]
+```
+
 How about if I format the list comprehension like this? Notice that the for loop and the if statement are in the same order as in the for loop. The only thing out of order is the value being added to the result.
 
 # When Can a List Comprehension be Used?
