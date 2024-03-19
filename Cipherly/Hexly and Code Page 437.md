@@ -141,6 +141,8 @@ If we lookup the MessagePack spec, we'll see that 83 encodes a map of three elem
 
 So, to get that demo of WordPerfect working, I used a free tool called DosBox, which emulates a Dos environment on my Mac. I'll admit, that it was really fun strolling down memory lane. If you enjoyed that, hit the thumbs up!
 
-This week, we hit our next milestone. We now have 2^7, or 128 subscribers! The next milestone will be 2^8, or 256 subscribers. Let me know in the comments how you'd like to celebrate the 2^8 milestone!
+Hexly is available on PyPI. You can install it by typing `pip install hexly` and then use it the way I did in this video. As usual, instructions, and all materials used to create this video are linked in the description, so check those out if you'd like to learn more.
+
+This week, we hit our milestone. We now have 2^7, or 128 subscribers! The next milestone will be 2^8, or 256 subscribers. Let me know in the comments how you'd like to celebrate the 2^8 milestone!
 
 More videos about Cipherly and other things that pique my interest will be landing in the near future. Subscribe so you don't miss those videos. Thanks for watching, and I'll see you in the next one!
