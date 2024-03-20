@@ -52,7 +52,7 @@ write('winbox_data = f.read()')
 tap(Key.enter, modifiers=[Key.shift])
 ```
 
-So, in the previous section, we ended up creating two files. Let's open the file we created in the Windows box which we called `WinBox/altchars.txt`. We know this this file was encoded as UTF-8, so Python can directly decode it. We can read this file in text mode which is indicated by this `r` here.
+So, in the previous section, we ended up creating two files. Let's open the file we created in the Windows box which we called `WinBox/altchars.txt`. We know that this file was encoded as UTF-8, so Python can directly decode it. We can read this file in text mode which is indicated by this `r` here.
 
 ```python codeanim
 write('winbox_data')
