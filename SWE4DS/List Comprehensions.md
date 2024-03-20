@@ -8,7 +8,7 @@ In this video, we're going to learn a simple trick to determine when it's possib
 
 ```python codeanim
 vscode.open("~/Workspace/swe4ds")
-vscode.newfile()
+vscode.new_file()
 vscode.save("comprehension.py")
 ```
 
