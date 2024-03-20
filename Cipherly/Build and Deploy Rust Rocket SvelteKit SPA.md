@@ -314,7 +314,7 @@ vscode.save()
 Next, let's configure SvelteKit to use the static adapter. So, we open `svelte.config.js` and just change `auto` to `static`.
 
 ```python codeanim
-vscode.newfile()
+vscode.new_file()
 paste("""export const prerender = true;
 export const ssr = false;
 export const trailingSlash = "always";
@@ -429,7 +429,7 @@ To get Rocket and our Single Page App running on Google Cloud Run, we need to pu
 
 ```python codeanim dockerfile-create
 tap("e", modifiers=[Key.cmd, Key.shift])
-vscode.newfile()
+vscode.new_file()
 tap("s", modifiers=[Key.cmd])
 pause()
 tap(Key.up, modifiers=[Key.cmd], repeat=2)
