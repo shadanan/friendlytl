@@ -1,6 +1,25 @@
 # Intro
 
-In a previous video, I added authorization based encryption to Cipherly. Cipherly is an app that makes it easy to share secrets with others over public channels. For example, if you want to share a secret with Alice, you can use Cipherly to encrypt a message using Alice's email address. Then you can send Alice the Cipherly payload over slack for example. In order for Alice to decrypt the payload, she will need to first authenticate with Cipherly. Authentication with Cipherly currently uses Sign-in with Google.
+In a previous video, I added authorization based encryption to Cipherly. Cipherly is an app that makes it easy to share secrets with others over public channels.
+
+```python codeanim
+chrome.activate()
+chrome.navigate("https://cipherly.app/auth/")
+tap(Key.tab, repeat=6)
+tap(Key.end)
+write("Username: AzureDiamond\nPassword: hunter2")
+tap(Key.tab)
+write("alice@gmail.com\n")
+tap(Key.tab, repeat=2)
+pause()
+tap(Key.enter)
+tap(Key.end)
+pause()
+tap(Key.tab)
+tap(Key.enter)
+```
+
+For example, if you want to share a secret with Alice, you can use Cipherly to encrypt a message using Alice's email address. Then you can send Alice the Cipherly payload over slack for example. In order for Alice to decrypt the payload, she will need to first authenticate with Cipherly. Authentication with Cipherly currently uses Sign-in with Google.
 
 In this video, we'll explain how Sign-in with Google works by adding it to the Time Getter webapp. Time Getter is a SvelteKit webapp I created in a previous video that fetches the time from a server that we wrote in Rust using the Rocket web framework. Using Sign-in with Google, our Rocket server will be able to know the identity of the user that is trying to fetch the time.
 
