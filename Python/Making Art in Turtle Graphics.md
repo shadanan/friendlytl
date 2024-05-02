@@ -44,25 +44,25 @@ write('annie.color("green")')
 
 I think the most popular color for a turtle is green. Let's make Annie green! Type, `annie.color("green")`. Close and rerun.
 
-Interesting, not only did Annie become green, but the line she drew is also green! So this is a way to set the color of the line that Annie draws.
+Interesting, not only did Annie become green, but the line she drew is also green! So, this is a way to set the color of the line that Annie draws.
 
 ```python codeanim
 write('turtle.bgcolor("blue")')
 ```
 
-Now that Annie is green, let's make the background a different color. How about blue, like the ocean? To change the background color, we type `turtle.bgcolor("orange")`. Notice that we didn't say annie this time. That's because we want to affect the background color, which is different from the turtle. Close and rerun. Whoa. That blue is pretty serious.
+Now that Annie is green, let's make the background a different color. How about blue, like the ocean? To change the background color, we type `turtle.bgcolor("blue")`. Notice that we didn't say annie this time. That's because we want to affect the background color, which is different from the turtle. Close and rerun. Whoa. That blue is pretty serious.
 
-I think we need a different shade of blue. Here's a tool I made so that you can choose a color. What color you ask? Any color! This is better than any crayon or coloring pencil.
+I think we need a different shade of blue. Here's a tool I made so that you can choose a color. What color you ask? Any color! This is better than any crayon or coloring pencil. You'll find the tool at shad.io/color.
 
-This slider that looks like a rainbow lets you choose the color. And this box let's you pick various shades of the color. This here is a nice shade of color for our ocean. Copy this value, and replace `blue` with our new value. Close and rerun. That ocean color is a lot more pleasant, don't you think?
+This slider that looks like a rainbow lets you choose the color. And this box let's you pick various shades of the color. Okay, this here is a nice color for our ocean. Click the copy button, and select `blue`. Edit, paste. Close and rerun. That ocean color is a lot more pleasant, don't you think?
 
-Okay, that's pretty nice, but, I think Annie needs a makeover. We can make her any color. So how about this one? Copy, paste. Close and rerun. Wow! Look at that. Annie is living her best life!
+Okay, that's pretty nice, but, I think Annie needs a makeover. We can make her any color. So how about this one? Click the copy button. Select `green`. Edit, paste. Close and rerun. Wow! Look at that. Annie is living her best life!
 
 # Line Thickness
 
 But that square, it's kind of thin, don't you think? And why are all the sides the same color?
 
-What do you think about making the square thicker and give each side a different color. Sound fun, right? Let's do it!
+What do you think about making the square thicker and giving each side a different color? Sounds fun, right? Let's do it!
 
 ```python codeanim
 write('annie.width(5)')
