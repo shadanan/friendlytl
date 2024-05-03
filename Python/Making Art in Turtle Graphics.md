@@ -254,44 +254,12 @@ Octagons have 8 sides, so let's copy that code, and paste it 7 more times. You c
 
 Look at that! With Anvi and Dima joining in, it’s a real art party now. I think it looks fantastic!
 
-# Regular Polygons
+# Outro
 
-After seeing Annie, Anvi and Dima drawing shapes with different numbers of sides and angles, you might be wondering if we can draw other shapes with different number of sides, Guess what? We absolutely can! Now you maybe wondering ok, if that's possible how do I know how much the turning angle is? Don't you worry, I got you covered!
+So that was our video on making art using turtle graphics. We're now able to change the background color, the color and thickness of our lines and even the shape of our turtle!
 
-All the shapes we’ve drawn are types of polygons. A polygon is a shape with straight sides. The square has 4 sides, the hexagon has 6, and the octagon has 8. We can make a polygon with any number of sides we want! here is a picture of other different polygons: we have a Pentagon, a Heptagon, a Nonagon and a Decagon! in fact, you can make a gon with any number of sides you want, you only need to decide on the number of side in advance!
+You should now be able to make the most beautiful art. I'm curious to know what you end up making! Post your ideas in the comments!
 
-And the angles you are asking! Here's a little trick about drawing polygons: to find out how much to turn the turtle at each corner, you divide 360 degrees by the number of sides. Why 360 degrees? Because a full turn, a complete circle around, is 360 degrees. So if you want to draw a square, 4 sides, you divide 360 by 4, which equals 90 degrees. That’s why our turtle turns 90 degrees at each corner of the square. For a hexagon, 6 sides, 360 divided by 6 equals 60 degrees. For an octagon, 8 sides, 360 divided by 8 equals 45 degrees.
+This video is the second in a series that gently introduces people to programming using Python and the turtle graphics module.
 
-You want to test this out? Let's have Benny draw a pentagon instead of an octagon. A pentagon has 5 sides. Now that you know the trick, can you guess how much the turtle should turn at each corner? Pause the video and give a thought.
-
-```python codeanim
-write('angle = 360/5')
-```
-
-Let’s do the math together. First, we divide 360 by 5. This calculation tells us that the turtle should turn 72 degrees at each corner of the pentagon. We can have our program do this calculation for us. To do this, we say angle and set it to be equal to 360 divided by 5. To see the result of this calculation, we tell our program to print it for us to see. To do this we write `print(angle)`. Close and rerun. Great! We can see our angle value down here, but Benny is still doing around drawing an octagon. Let's fix that.
-
-```python codeanim
-write('benny.forward(200)')
-write('benny.left(angle)')
-write('benny.forward(200)')
-write('benny.left(angle)')
-write('benny.forward(200)')
-write('benny.left(angle)')
-write('benny.forward(200)')
-write('benny.left(angle)')
-write('benny.forward(200)')
-write('benny.left(angle)')
-write('benny.forward(200)')
-write('benny.left(angle)')
-write('benny.forward(200)')
-write('benny.left(angle)')
-write('benny.forward(200)')
-```
-
-Let me show you another cool trick. Now that we know we need to update Benny to turn by 72 degrees to draw a pentagon. Instead of typing 72, we can type `angle` instead since it holds the value 72. Amazing, isn't it? let's do it. Close and rerun. Here is a pentagon!
-
-# Challenge: Create Your Own Polygon
-
-Now that you know the secret formula, it's your turn to create your own awesome polygons! choose any number of sides, or you can pick any polygon you like from the picture linked in the discription. Do the math to find out the angle, and program your turtle to draw it.
-
-I'm curious to see what will you create. A seven-sided heptagon? Maybe a ten-sided decagon? let me know in the comments!
+If you liked this video, hit the thumbs up. I'm The FriendlyTL and I make edutainment videos about software and open source apps that I also make. If you're interested in this kind of content, consider subscribing. Thanks for watching; I'll see you in the next one!
