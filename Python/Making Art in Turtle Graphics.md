@@ -25,6 +25,11 @@ Today, we're going to play with the colors, and adjust the thickness of lines. W
 
 # New File
 
+```python codeanim run
+click((830, 102))
+wait()
+```
+
 This is the code we wrote last time. It creates a turtle called Annie, and it draws this square. Let's reuse this code to make a much nicer looking square. Let's run it to remind ourselves what it does. Click the triangle button to run our program. And there is our square from last time!
 
 If you didn't do the exercise from last time, I've linked the code in the description so that you can copy pasta.
@@ -34,7 +39,7 @@ If you didn't do the exercise from last time, I've linked the code in the descri
 ```python codeanim shape
 click((404, 222))
 write('\nannie.shape("turtle")\n')
-click((830, 102))
+rerun()
 ```
 
 The first thing we'll do is make Annie look like an actual turtle. To do this, we type `annie.shape("turtle")`. Remember that to run the program, we have to close the previous program. So, click the X, and then click the triangle button to rerun our program. Wow! Annie is no longer a poor arrow. She's a proper turtle now!
@@ -194,12 +199,12 @@ Dima finally got his invitation to join the party. It was late in the mail. Clas
 
 ```python codeanim hexagon
 vscode.activate()
-tap(Key.up, repeat=8)
+vscode.jump(27)
 write('\nanvi.forward(100)\n')
 write('anvi.right(60)\n')
-drag((165, 542), (165, 592))
+drag((165, 486), (165, 537))
 copy()
-click((165, 592))
+click((165, 537))
 paste()
 tap("v", modifiers=[Key.cmd])
 tap("v", modifiers=[Key.cmd])
@@ -235,7 +240,7 @@ Annie and Anvi's tasks are done, so Annie tells Dima to draw an octagon. Annie's
 
 ```python codeanim octagon
 vscode.activate()
-vscode.jump(47)
+vscode.jump(49)
 write('\ndima.forward(200)\n')
 write('dima.left(45)\n')
 ```
