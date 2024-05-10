@@ -1,4 +1,9 @@
 ```python codeanim header
+def close():
+    click((974, 40))
+def run():
+    click((830, 102))
+    wait()
 def rerun():
     click((974, 40))
     click((830, 102))
@@ -7,87 +12,91 @@ def rerun():
 
 # Intro
 
-In our last video, we had our three turtles, Annie, Anvi, Dima take turns to draw some cool shapes. Annie started first drawing an orange square, followed by Anvi that drew a green hexagon around Anvi's square, and finally Dima that drew a octagon around Anvi's hexagon.
+In our last video, our turtles, Annie, Anvi and Dima took turns drawing some cool shapes. Annie started off by drawing an orange square. Then, Anvi drew a green hexagon around Annie's square. And Dima it up by drawing an octagon around everything.
 
-But did you notice that when we were writing the code to draw these shapes we wrote the same lines over and over again. That can get a bit repetitive and boring, right? Well, guess what? There's a special way in Python called a `for` loop that can helps us avoid repeating ourselves!
+Perhaps you noticed that our code got quite long. We used copy paste to copy pasta code to draw the sides of our shapes. But suppose I wanted to describe to you how to draw a square.
 
-Today, we are going discover how to use a `for` loop to make our coding life much easier and fun!
+I might say, draw a line, turn 90 degrees to the right, then do it again, and again a third time, and once more, and you'll end up back where you started. Another way I could describe it would be, draw a line, turn 90 degrees, and do those steps 4 times in total. This is a much simpler way to describe how to draw a square.
 
-# `for` loop
+We can do the same thing in Python using a for-loop. For-loops help us make our code simpler by avoiding repetition. Today, we are going to discover how to use a for-loop to make our code simpler!
 
-This is the code we wrote last time. Let's reuse this code to write a `for` loop.
+# For-Loop
 
 ```python codeanim new-file
 vscode.activate()
-vscode. resize((0, 25), (1920//2, 1080))
-tap("a", modifiers=[Key.cmd])
-tap("c", modifiers=[Key.cmd])
-tap("n", modifiers=[Key.cmd])
-tap("v", modifiers=[Key.cmd])
-tap("s", modifiers=[Key.cmd])
-write('loops')
-click((645, 645))
-click((830, 102))
+vscode.jump(13)
+run()
 ```
 
-So first, let's select this code, you can select all the code by pressing Ctrl+A or Cmd+A if you're on a Mac. Then click Ctrl+C to copy, or Cmd+C on a Mac.
+This is the code we wrote last time. Let's run it again to remind ourselves what it did. Nice. There our turtles drawing our three shapes.
 
-Now, let's create a new file. You can Click File, New File or press Ctrl+N or Cmd+N if you're on a Mac.
-
-Paste our previous code pressing Ctrl+V or Cmd+V if you're on a Mac.
-
-And let's save it. File, Save or press Ctrl+S or Cmd+S if you're on a Mac. And we'll name it `loops.py`. Save. Let's make sure that it runs. Click the triangle. And there are our shapes from last time!
+Now, let's have Annie draw a square again, but smarter this time! Notice how we tell annie to move forwards 4 times, and to turn right 3 times? Well, let's modify this code do it with a for loop instead.
 
 ```python codeanim square
-vscode.activate()
-vscode.jump(11)
-drag((113, 303), (410, 414))
-write("\b")
-write('for side in range(4):\n')
-write('annie.forward(100)\n')
-write('annie.right(90)\n')
+tap(Key.down, repeat=5, modifiers=[Key.shift])
+tap(Key.backspace)
+tap(Key.up, repeat=3)
+write('\nfor side in range(4):')
+tap(Key.down)
+tap(Key.left, modifiers=[Key.cmd])
+tap(Key.tab)
+tap(Key.down)
+tap(Key.left, modifiers=[Key.cmd])
+tap(Key.tab)
 rerun()
 ```
 
-Now, let's have Annie draw a square again, but smarter this time! To do this, we first select and delete this code. Then we type `for side in range(4):` then, new line. Notice that the new line brings us inside the for loop. Then type `anvi.forward(150)` and `anvi.right(60)`. Close and run. Amazing!
+To do this, we first select and delete the duplicated code. Then we type `for side in range(4):` here. Now, to tell Python that we want these two lines to be repeated in the loop, we indent them by placing our cursor here, and pressing tab.
 
-In Python, we use a `for` loop to repeat an action multiple times but with fewer lines of code. `range()` tells the computer how many times to repeat something. So `range(4)` repeats the loop 4 times, which is perfect for drawing a square with 4 sides.
+In Python, we use a `for` loop to repeat an action multiple times. `range()` tells the computer how many times to repeat something. So `range(4)` repeats the loop 4 times, which is perfect for drawing a square with 4 sides.
 
-`side` is a counter that keeps track of how many sides of the shape we've already drawn. Each time the loop runs, `side` represents the next side of the shape we're going to draw.
-
-Notice, the two lines of code are inside the for loop. We do this to tell Python which code belong to the loop. This way only the code inside the `for` loop will be repeated.
-
-So, basically this for loop tells the computer "Keep doing these steps in order until you have made all 4 sides of the square".
+`side` is a counter that keeps track of how many sides of the shape we've already drawn. So, first, side will be 0 when it is drawing the top, 1, when it is drawing the right side, 2 for the bottom, and 3 for the left side. Many programming languages are a little funny because they start counting at 0 instead of 1.
 
 ```python codeanim hexagon
-vscode.activate()
-vscode.jump(24)
-drag((116, 546), (215, 738))
-write("\b")
-write('for side in range(6):\n')
-write('anvi.forward(150)\n')
-write('anvi.right(60)\n')
+vscode.jump(26)
+```
+
+Great! Now let's do the same for Anvi. Here is the spot that we'll be making our code change. If you want to try it yourself, pause the video and give it a try! If you're not at a computer, think about what the changes should be. Maybe say it out loud. Don't worry if there are people around!
+
+```python codeanim hexagon-2
+tap(Key.down, repeat=10, modifiers=[Key.shift])
+tap(Key.backspace)
+tap(Key.up, repeat=3)
+write('\nfor side in range(6):')
+tap(Key.down)
+tap(Key.left, modifiers=[Key.cmd])
+tap(Key.tab)
+tap(Key.down)
+tap(Key.left, modifiers=[Key.cmd])
+tap(Key.tab)
 rerun()
 ```
 
-Great! now that you know the trick, pause the video and try it yourself with Anvi and Dima!
-
-Same steps again, we select and delete the code. Then we type `for side in range(8)` then new line, then we `anvi.forward(150)` followed by `anvi.right60)`. Close and rerun. Great!
+Okay, so, Anvi is making a hexagon, so we want to repeat lines 24 and 25 six times. Let's start by deleting 26 through 35. Then we type `for side in range(8):` and then we indent these two statements. Close and rerun. Great!
 
 ```python codeanim octagon
-vscode.activate()
-vscode.jump(37)
-drag((114, 549), (208, 823))
-write("\b")
-write('for side in range(8):\n')
-write('dima.forward(200)\n')
-write('dima.left(45)\n')
+vscode.jump(48)
+```
+
+Dima's turn now! Look at all this code. That's 16 lines of code. When we're done for-looping it, it should only be 3. If you didn't get it last time, then 3rd time's a charm, right? Think about what we want to do and how many times we want to do it. Pause the video the puzzle it out for yourself!
+
+```python codeanim octagon-2
+tap(Key.down, repeat=14, modifiers=[Key.shift])
+tap(Key.backspace)
+tap(Key.up, repeat=3)
+write('\nfor side in range(8):')
+tap(Key.down)
+tap(Key.left, modifiers=[Key.cmd])
+tap(Key.tab)
+tap(Key.down)
+tap(Key.left, modifiers=[Key.cmd])
+tap(Key.tab)
 rerun()
 ```
 
-Dima's turn now! Again, we select and delete the previous code, then we type `for side in range(8)` then new line then `dima.forward(200)` followed by `dima.right(45)`. Close and rerun.
+Did you figure it out? Let's find out. So, we start by deleting the duplicated code. Then we type `for side in range(8):` and then we indent the statements. Close and rerun.
 
-Notice that our code is much smaller and simpler. With a `for` loop, it's just a couple of lines of code, no matter how many times we need to repeat the action. Always remember, smart coders are lazy coders, they make the computer do the hard work!
+Notice that our code is much smaller and simpler! With a for-loop, it's always just three lines of code, no matter how many sides our shape has. Remember, smart coders find simple solutions to problems!
 
 # Drawing a Spiral
 
