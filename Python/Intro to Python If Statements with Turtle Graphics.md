@@ -1,207 +1,281 @@
-# Link:
+# Links:
 
 - Turtle Graphics Documentation: https://docs.python.org/3/library/turtle.html#turtle.speed
 - Color table: https://shad.io/tkcolors/
 
 ```python codeanim header
-def close():
-    click((974, 40))
 def run():
     click((830, 102))
     wait()
 def rerun():
-    click((974, 40))
-    click((830, 102))
+    with delay(0):
+        click((974, 40))
+        click((830, 102))
     wait()
+def copy():
+    click((165, 12))
+    click((220, 118))
 def paste():
     click((165, 12))
-    click((271, 142))
+    click((220, 142))
 ```
 
 # Intro
 
-In our last video, we learned how to simplify repetitive tasks in our code using for-loops. We saw how our turtle, Keith was able to effortlessly draw a whole spiral with just a few lines of code thanks to the power of for-loops. It was as if we gave him a list of things to do over and over again, and he executed it flawlessly.
+In our last video, we learned how to simplify repetitive tasks in our code using for-loops. As a result, Keith was able to draw a giant spiral with just a few lines of code, all thanks to the awesomeness of for-loops!
 
-Now, let's say we want Keith to vary his action depending on what's happening around him? for example, if he has traveled a certain distance, we might want him to change his color to let us know he's halfway through drawing the spiral. 
-
-That's where `if` statements come into play! `if` statements are like special rules we add to our code that allow us to make choices based on the situation we're faced with. They function much like our everyday decisions: if we’re hungry, we eat, if it's cold outside, we wear a coat. Similarly, in programming, `if` statements give our code the ability to choose different actions based on varying conditions.
-
-Today, we're going to discover how to use `if` statements to make our code flexible and give our turtles even more powerful and dynamic capabilities!
+So far, our turtles have simply followed directions. They never made decisions. In this episode, we're going to learn about `if` statements. `if` statements enable our turtles to make decisions! Let's get started!
 
 # If statement
 
 ```python codeanim new-file
 vscode.activate()
-vscode.jump(13)
 run()
 ```
 
-This is the code we wrote last time. Let's run it again to make sure everything is working correctly.
-
-The spiral is quite impressive, isn’t it?
+This is the code we wrote last time. Let's run it again to make sure everything is working correctly. The spiral is quite impressive, isn’t it?
 
 ```python codeanim if-distance
 vscode.activate()
-vscode.jump(10)
-tap(Key.right, modifiers=[Key.cmd])
-tap(Key.enter)
+vscode.jump(11)
+vscode.newline(above=True)
 write('if distance > 100:\n')
-write('keith.color("CornflowerBlue")\n')
+chrome.activate()
+chrome.navigate("https://shad.io/tkcolors/")
+tap(Key.space, repeat=2)
+vscode.activate()
+write('keith.color("CornflowerBlue")')
 rerun()
 ```
 
-Okay, now if we want Keith to switch to blue when he's more than halfway through the spiral, we need to add an `if` statement to check the distance each time we loop.
+Okay, let's have Keith make a decision. Let's say that we want Keith to change his color to blue if he starts traveling very far.
 
-Great! So we type `if distance > 250:`. By the way, we can reler the color using its name as well.  I have created this color table for you, so you can choose from all the different possible colors and get to know some cool color names as well. Let's select this `CornflowerBlue`. New line `keith.color("CornflowerBlue")`, past the color. Notice that the command under if is also idented. Let's close and rerun to see what will happen.
+Here, we type `if distance > 100:`. Now let's set Keith's color. I created this color table for you at shad.io/tkcolors/. You can pick any color from this table, and use it as the color name in turtle graphics. This `CornflowerBlue` is nice. So, switch back to VS code and type `keith.color("CornflowerBlue")`. Let's run that.
 
-Wow, the spiral looks even cooler with the added color!
+Noice! Our `if` statement is working!
 
 # if-else Statements: More Decisions!
 
-Okay, let's keep experimenting with `if` statement to make new art.
+Alright. Keith has done a great job with loops. We have a new turtle who wants to draw some nice pictures. Her name is Madame Sue!
 
-Our adventure with Keith has come to an end. We will remove this code, but don’t worry—if you need to refer back to it, the link will be available in the description.
+```python codeanim clear
+vscode.activate()
+vscode.jump(3)
+tap(Key.down, modifiers=[Key.cmd, Key.shift])
+tap(Key.up, repeat=2, modifiers=[Key.shift])
+tap(Key.left, modifiers=[Key.shift])
+tap(Key.backspace)
+```
 
-Now, let’s welcome Madame Sue. Madame Sue enjoys drawing and coloring, she wants to draw a vibrant flower. She plans to draw a flower by alternating the petal colors between colors to make the flower really stand out. Let's help her figure out how to create this colorful masterpiece!
+Let's say farewell to Keith and his code. But don’t worry – you'll find a link to his code in the description. Bye Keith!
+
+Now, Madame Sue plans to draw a beautiful flower. Let's help her figure out how to create her colorful masterpiece!
 
 ```python codeanim madame-sue
-vscode.jump(5)
-tap(Key.down, repeat=10, modifiers=[Key.shift])
-write('turtle.bgcolor("SkyBlue")\n')
-write('\nmadame_sue = turtle.Turtle()\n')
+chrome.activate()
+vscode.activate()
+write('turtle.bgcolor("LightSkyBlue")\n\n')
+write('madame_sue = turtle.Turtle()\n')
 write('madame_sue.shape("turtle")\n')
-write('madame_sue.width(5)\n')
+write('madame_sue.width(6)\n')
+chrome.activate()
+vscode.activate()
 write('madame_sue.color("DeepPink")\n')
+rerun()
 ```
 
-First, let's set the stage for Madame Sue to create her masterpiece. Starting with the background `turtle.bgcolor("SkyBlue")`. Bring up the color table again and choose a soothing light blue color. Then, let's bring our artist turtle, Madame Sue, into the picture. Type `madame_sue = turtle.Turtle()` to create her. Next, give her a turtle shape with `madame_sue.shape("turtle")`.
+Let's start by painting our canvas a nice sky blue. This `LightSkyBlue` looks good.
 
-Now, let's adjust the appearance of her drawing pen. Set the width of her line `madame_sue.width(6)`, to make her drawings more visible. Then let's choose a nice color for Madame Sue, I want this Deep Pink, type `madame_sue.color("DeepPink")` and paste the color. Feel free to pick any color that you think will make Madame Sue's artwork pop!
+Then, we create our artist turtle, Madame Sue: `madame_sue = turtle.Turtle()`. And of course, she must be the shape of a turtle. Set the width of her line to 6.
 
-```python
-for i in range(50):
-    madame_sue.forward(100)
-    if i % 2 == 0:
-        madame_sue.right(170)
-    else:
-        madame_sue.left(170)
+Now, let's pick a beautiful color for Madame Sue. I'm gonna go with this Deep Pink but feel free to pick any color that you think Madame Sue will like!
+
+Nice. There's our beautiful sky, and Madame Sue looks ready to start!
+
+```python codeanim grass-1
+vscode.activate()
+write('\nfor i in range(50):\n')
+write('madame_sue.forward(100)\n')
+write('if i % 2 == 0:\n')
+write('madame_sue.right(170)\n')
+write('\belse:\n')
+write('madame_sue.left(170)\n')
+rerun()
 ```
 
-Let's help Madame Sue draw her beautiful flower. Imagine how a flower spins around to display all its petals. So we need to have Madame Sue something similar. Have her walk in a special pattern to simulate a cirle. To mimic the pattern of petals around a flower, she will need to alternate between different turn angles to draw each petal. Since we're going to be drawing the petal over and over, we want to use a loop to tell our program to repeat the instructions several times. So we type `for i in range(50):`, Let's loop 50 times. We want to loop enough times to make our flower look full and pretty!
+Let's try to draw a flower! When Keith made a spiral, we used a for-loop to get him to go around in a circle. That's a good starting place. So, type `for i in range(50):`
 
-Next let's have Madame Sue move forward by let's say 100 units each iteration. Type `madame_sue.forward(100)`. Now, to alternate between turning angles, we need to establish rules that dictate when to turn right and when to turn left. Can you think of how we can instruct her when to turn which way using if statements?
+Next let's have Madame Sue move forward by let's say 100 units. Type `madame_sue.forward(100)`. Now, let's have alternate between turning left and right. So, type `if i % 2 == 0:`, new line, `madame_sue.right(170)`, new line, `else:`, new line, `madame_sue.left(170)`.
 
-Here is an idea! Let's have Madame Sue turn right by 100 degrees if the current step number `i` is even i % 2 == 0. We check if a number is even by seeing if the remainder when divided by 2 is 0, which we can write as `if i % 2 == 0:` new line `madame_sue.right(170)`.
+Let's give it a try! Oh, this is interesting. We have a zigzag! So, half the time, we turn 170 degrees to the right, and the other half of the time, we turn back 170 degrees to the left. You know, this zigzag kinda of looks like grass. Actually, having some grass would be nice!
 
-But what if `i` is odd? Then we can have Madame Sue turn left by maybe 100 degrees. To do this we use an `else` statements to specify what should happen when the condition in the if statement isn't met, which in the case when i is odd. So we type new line `else:`, then new line `madame_sue.left(100)`. 
-
-This is amazing!`if-else` statements give us even more options for decision making!
-
-Great! I have randomly choosen these turning angles, I'm hoping this variation in angles will help us creates an intricate pattern resembling a flower. We can always experiment with different angles to get various petal shapes. Let's run our program to see what happens. 
-
-```python
-madame_sue.speed(0)
+```python codeanim grass-2
+vscode.activate()
+vscode.jump(10)
+vscode.newline(above=True)
+write('madame_sue.setheading(85)\n')
+write('madame_sue.penup()\n')
+write('madame_sue.goto(-500, -520)\n')
+write('madame_sue.pendown()\n')
+rerun()
 ```
 
-By the way, we can also speed uo the drawing by typing `madame_sue.speed(0)`. Setting the speed to 0 makes her move as fast as possible. I have linked the documentation bellow for you to to explore different speeds. Let's close and rerun.
+Let's change Madame Sue's drawing direction to have the grass peaks face upward, and position it at the bottom of the screen. According to the documentation, 0 is east, 90 is north, 180 is west, 270 is south. Let's have Madame Sue start her first move slightly northeast, say by 85 degrees. So, we type `madame_sue.setheading(85)`. Then we move Madame Sue to the bottom left of the screen with `madame_sue.penup()`, `madame_sue.goto(-500, -520)`, and `madame_sue.pendown()`.
 
-```python 
-madame_sue.setheading(85)
-madame_sue.penup()
-madame_sue.goto(-500, -520)
-madame_sue.pendown()
+```python codeanim grass-3
+vscode.activate()
+write('madame_sue.color("DarkGreen")\n')
+click((330, 552), count=2)
+write('120')
+tap(Key.up, repeat=7)
+write('madame_sue.speed(0)\n')
+rerun()
 ```
 
-Uh oh, what's this zigzag? this looks more like grass instead of a flower. Wait, we can actually make it look like grass! Let's change Madame Sue's drawing direction to have the grass peaks face upward and position it at the buttom of the screen. To do this we type `madame_sue.setheading(85)`. According to the documentation, 0 is east, 90 is north, 180 is west, 270 is south. Let's have Madame Sue start her first move slightly northeast, say by 85 degrees. Then `madame_sue.penup()`, `madame_sue.goto(-500, -520)`, and `madame_sue.pendown()`. Let's rerun!
+Ok, now we have some pink grass. And we kinda stopped halfway. Let's fix it! So first, we change the color to dark green. Now, to get the grass to span the whole bottom of our canvas, we can increase the number of loop iterations, say to 120. Before we rerun, let's get Madame Sue to draw as fast as possible. On line 9, type `madame_sue.speed(0)`.
 
-```python
-madame_sue.color("DarkGreen")
-madame_sue.begin_fill()
-for i in range(50):
-    madame_sue.forward(100)
-    if i % 2 == 0:
-        madame_sue.right(170)
-    else:
-        madame_sue.left(170)
-madame_sue.end_fill()        
+```python codeanim grass-4
+vscode.activate()
+tap(Key.down, repeat=6)
+write('madame_sue.begin_fill()')
+tap(Key.down, repeat=7)
+write('madame_sue.end_fill()')
+rerun()
 ```
 
-Great! We can also fill the color in green to make it more resemble grass more closely. Bring up the color table, Wow, so many nice green shades. Let's choose this Dark Green. Type `madame_sue.color("DarkGreen")` and past Dark Green, and add `madame_sue.begin_fill()` before starting the loop and `madame_sue.end_fill()` after the drawing is done. 
+That's looking great! But we can sorta see the sky behind the grass. We can fix this by filling. Type `madame_sue.begin_fill()` before the loop. Then, when the loop is done, type `madame_sue.end_fill()`.
 
-```python
-# Grass     
+```python codeanim sun-1
+vscode.activate()
+drag((165, 584), (165, 740))
+copy()
+click((165, 404))
+vscode.newline()
+paste()
+click((335, 428), count=2)
+write('50')
+click((439, 506), count=2)
+write('180')
+click((429, 558), count=2)
+write('160')
+rerun()
 ```
 
-Now that we have grass let have Madame Sue try drawing a flowing again. Let's push the grass code  bellow and have Madame Sue start by drawing the flower first. This way, we can quickly adjust if something doesn't look right. 
+Great. The grass is done! But we got distracted. Madame Sue was trying to draw a flower! Let's give that another try. Let's copy our grass code and try to get it to make a flower. First, let's change our loop back to 50. Now, let's try some different angles to see what happens. When we turn right, let's turn by 180 degrees. And when we turn left, let's turn by 160.
 
-```python
-for i in range(50):
-    madame_sue.forward(100)
-    if i % 2 == 0:
-        madame_sue.right(180)
-    else:
-        madame_sue.left(160)
-```
-Okay, copy past the code here and let's experiment with angles till we find the closest shape to a flower. This time, let's have Madame Sue turn right ` madame_sue.right(180)` by 180 when `i` is even and turn left by 160 `madame_sue.left(160)` when `i` is odd. Let's close and rerun.
-
-```python
-    madame_sue.left(170)
+```python codeanim sun-2
+vscode.activate()
+click((165, 404))
+vscode.newline()
+write('madame_sue.color("Yellow")\n')
+write('madame_sue.penup()\n')
+write('madame_sue.goto(350, 400)\n')
+write('madame_sue.pendown()')
+rerun()
 ```
 
-Hmm, it's not quite a flower shape yet. We need to make the petals stand out more. Let's see what happens when we change left to 170. 
+Well, it's starting to look like a flower. But you know, right now, it looks more like a sun than anything. Are you thinking what I'm thinking? Let's go! Let's change the color to yellow by typing `madame_sue.color("Yellow")`. And, let's put the sun in the top right corner. Type, `madame_sue.penup()`, `madame_sue.goto(350, 400)`, then `madame_sue.pendown()`.
 
-Doesn't this look like a sun? Are you thinking what I'm thinking? make it look like a sun? Brilliant idea, isn't it. 
-
-```python
-madame_sue.color("Yellow")
-madame_sue.penup()
-madame_sue.goto(300, 300)
-madame_sue.pendown()
-for i in range(40)
+```python codeanim sun-3
+vscode.activate()
+click((418, 558), count=2)
+write('60')
+rerun()
 ```
 
-Let's change the color to yellow and have Madame Sue draw it up in the left corner. We also can reduce the range to 40 since Madame Sue was tracing over the sun again. So type `madame_sue.color("Yellow")`, `madame_sue.penup()`, `madame_sue.goto(300, 300)` maybe by 300, 300, then `madame_sue.pendown()`. We make the sun smaller by moving forward only by 60 `madame_sue.forward(100)`. This give the illusion the sun is far away! Close and rerun. 
+The sun's rays are a bit long. We make it smaller by moving forward by 60 instead of a 100. Nice. This gives the illusion that the sun is far away!
 
-That's amazing! It seems like Madame Sue drew a beautiful sunny day. All we need now is some beautiful colorful flowers for this to be complete!
-
-```python
-madame_sue.color("DarkRed")
-for i in range(50):
-    madame_sue.forward(100)
-    if i % 2 == 0:
-        madame_sue.right(170)
-    else:
-        madame_sue.left(160)
+```python codeanim flower-1
+vscode.activate()
+drag((165, 532), (165, 688))
+copy()
+click((165, 404))
+vscode.newline()
+paste()
+click((440, 506), count=2)
+write('170')
+rerun()
 ```
 
-Let's experiment again! Copy paste this code, add comments #Grass, #Sun to the code so we can easily identify which part of the code is responsible for drawing the sun and which part is for the grass. Let's change the drawing color to, let's see dark red? type `madame_sue.color("DarkRed")` and past the color. This time let's try a right angle of 170 `madame_sue.right(170)`. Let's see what we got this time!
+Alright, we set out to draw a flower, and we got grass and a sun. Third time's a charm. This time, for sure, we're gonna make a flower. Let's copy paste our sun code. And this time, let's try changing `180` to `170`.
 
-```python 
-for i in range(80)
+```python codeanim flower-2
+click((330, 428), count=2)
+write('80')
+rerun()
 ```
 
-Wow, it's starting to take the shpe of a flower, uh oh, what happened? why did Madame Sue stop? She was so close to finishing her drawing. It looks like we need to increase the loop time to allow her to complete the flower. Let's increase to 80 since she not far from where she started, we don't want her to trace over the flower. Let's rerun.
+Okay, that's really starting to look like a flower! But Madame Sue stopped shy of completing it. Let's increase the range from `50` to `80`.
 
-```python
-madame_sue.color("DarkRed")
-for i in range(80):
-    madame_sue.forward(100)
-    if i % 2 == 0:
-        madame_sue.right(170)
-    else:
-        madame_sue.left(160)
+```python codeanim flower-3
+click((165, 404))
+write('\nmadame_sue.begin_fill()')
+click((165, 610))
+write('madame_sue.end_fill()\n')
+rerun()
 ```
 
-Wow, this is looking great, we finally have a flower! Now, let's help Madame Sue fulfill her wish of drawing a colorful flower. Bring up the color table and set a rule, if the petal number `i` is even, Madame Sue draws a hein MediumPurple petal, else if the petal number `i` is odd, Madame Sue draws a DarkMagenta petal. Let's add the commands to under the conditions we have set. So we pick the color red then type `madame_sue.color("MediumPurple")` under the first condition, then pick the yellow color and type `madame_sue.color("DarkMagenta")` under the second condition. Let's also reduce the forward distance to make it look smaller and better fit in the artwork `madame_sue.forward(30)`. I'm excited to see what it looks like now!
+The flower is showing the blue sky behind it. Let's fill it in like we did with the grass. Before the loop, we type `madame_sue.begin_fill()`, then, after the loop, type `madame_sue.end_fill()`.
 
-This is so pretty! Madame Sue has successfully drawn a colorful flower just as she wanted and even more.
+```python codeanim flower-4
+click((330, 454), count=2)
+write('70')
+rerun()
+```
+
+It's almost perfect. But the fill didn't quite work, you can see a bit of sky here. That's probably because our turtle didn't end where it started. Let's try 70 instead.
+
+```python codeanim flower-5
+click((330, 454), count=2)
+write('72')
+rerun()
+```
+
+Ooops. We're missing one petal now. Let's try 72. Great. That's perfect.
+
+```python codeanim stem-1
+click((165, 404))
+vscode.newline()
+vscode.newline(above=True)
+chrome.activate()
+tap(Key.up, repeat=26)
+vscode.activate()
+write('madame_sue.color("SaddleBrown")\n')
+write('madame_sue.goto(0, -500)')
+rerun()
+```
+
+Now, for the finishing touch. We need to give the flower a stem. Let's make it this SaddleBrown color. And then, we'll draw a line straight down to the ground at 0, -500.
+
+```python codeanim stem-2
+click((280, 352))
+tap(Key.down, modifiers=[Key.alt], repeat=5)
+vscode.newline()
+write('madame_sue.penup()\n')
+write('madame_sue.goto(0, 0)\n')
+write('madame_sue.pendown()')
+rerun()
+```
+
+Ooops! Our flower got misplaced. And it's the wrong color now. Let's fix it. We need to move line 8 to here so that we are using the correct color for the flower. And then, Madame Sue needs to return to 0, 0 after drawing the stem. So type, `madame_sue.goto((0, 0))`. Rerun.
+
+```python codeanim stem-3
+click((165, 430))
+vscode.newline(above=True)
+write('madame_sue.goto(-50, 0)')
+rerun()
+```
+
+Hmm. The stem is not in the center. Let's first go to the center of the flower before we draw the stem down to the ground.
+
+Wow. Look at this turtlerific masterpiece that Madame Sue has drawn!
 
 # Outro
 
-Today we learned how to use an `if` statements to make our code flexible by making our turtles make decisions based on different conditions. We also saw how to use an `if` statements to help Madame Sue draw a masterpiece.
+Today we learned how to use `if` statements to enable our turtles to make decisions.
 
-Can you think of other conditions we can use with if statements to make our turtles do different things? Maybe add more flowers? Remember, you can use if and if-else statements to create all sorts of amazing artwork! drawing different shapes, change colors, and so much more! Try it out and see what happens. Don't forget to share your ideas in the comments below!
+What other conditions do you think we can use with `if` statements to make our turtles do different things? How about alternating the colors of our petals? Try it out and see what happens! And don't forget to share your ideas in the comments.
 
-This video is the forth in a series that gently introduces people to programming with Python and the turtle graphics library.
+This video is the fourth in a series that gently introduces people to programming with Python and the turtle graphics library.
 
 If you liked this video, hit the thumbs up. I'm The FriendlyTL and I make edutainment videos about software and open source apps that I also make. If you're interested in this kind of content, consider subscribing. Thanks for watching; I'll see you in the next one!
