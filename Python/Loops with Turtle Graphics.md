@@ -108,21 +108,6 @@ Notice that our code is much smaller and simpler! With a for-loop, it's always j
 
 # Drawing a Spiral
 
-```python codeanim header2
-def close():
-    click((974, 40))
-def run():
-    click((830, 102))
-    wait()
-def rerun():
-    click((974, 40))
-    click((830, 102))
-    wait()
-def paste():
-    click((165, 12))
-    click((271, 142))
-```
-
 Okay, let's make some new art. We have a very enterprising turtle named Keith. And Keith wants to make a spiral.
 
 ```python codeanim clear
