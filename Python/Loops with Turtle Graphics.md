@@ -79,7 +79,7 @@ tap(Key.tab)
 rerun()
 ```
 
-Okay, so, Anvi is making a hexagon, so we want to repeat lines 24 and 25 six times. Let's start by deleting lines 26 through 35. Then we type `for count in range(8):` and then we indent these two statements. Close and rerun.
+Okay, so, Anvi is making a hexagon, so we want to repeat lines 24 and 25 six times. Let's start by deleting lines 26 through 35. Then we type `for count in range(6):` and then we indent these two statements. Close and rerun.
 
 ```python codeanim octagon
 vscode.activate()
